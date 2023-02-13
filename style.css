@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+input {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 21px;
+}
+
+input::placeholder {
+    color: #ACACAC;
+}
+
+input:focus {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.main-background {
+    background-image: url('./public/images/day/image_8.png');
+    background-position-y: -659px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    height: 1298px;
+    background-image: linear-gradient(to bottom,
+            rgba(16, 16, 16, 0.6),
+            rgba(16, 16, 16, 0.6));
+}
+
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(to bottom,
+            rgba(16, 16, 16, 0.55),
+            rgba(16, 16, 16, 0.55));
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    opacity: 1;
+    color: #FFFFFF;
+    overflow-x: scroll;
+}
+
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.city {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.city-icon {
+    font-size: 35px;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+.city-text {
+    font-size: 24px;
+    margin-right: 64px;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    color: #ACACAC;
+    cursor: pointer;
+}
+
+.add-text {
+    font-size: 21px;
+}
+
+.add-icon {
+    font-size: 30px;
+    font-weight: 300;
+    padding-right: 16px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.hero {
+    width: 424px;
+    height: 155px;
+}
+
+.hero-date-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    margin-bottom: 23px;
+}
+
+.hero-date {
+    color: #FFFFFF;
+}
+
+.hero-time {
+    color: #ACACAC;
+}
+
+.hero-temp {
+    display: flex;
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.var-temp {
+    height: 100%;
+    color: #ACACAC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.var-temp .temp-text {
+    font-size: 28px;
+}
+
+.var-temp .temp-value {
+    font-size: 40px;
+}
+
+.temp {
+    color: #FFFFFF;
+    font-size: 64px;
+}
+
+.high {
+    text-align: end;
+}
+
+.condition-icon-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.condtion-icon {
+    font-size: 128px;
+    color: #FFFFFF;
+}
+
+.condition-text {
+    font-size: 64px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.info-text {
+    margin: 0px 56px;
+}
+
+.astro-times {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+
+.astro-time {
+    color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.astro-time .text {
+    text-transform: lowercase;
+    font-size: 20px;
+}
+
+.astro-time .time {
+    font-size: 40px;
+}
+
+.start {
+    text-align: left;
+}
+
+.end {
+    text-align: right;
+}
+
+.hourly {
+    width: 90%;
+    margin-bottom: 64px;
+}
+
+.hourly-cards-container {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom,
+            rgba(128, 128, 128, 0.4),
+            rgba(128, 128, 128, 0.4));
+    overflow-x: scroll;
+    display: flex;
+}
+
+.hourly-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.hourly-card {
+    flex: 0 0 250px;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 24px 0px;
+    color: #FFFFFF;
+    /* transform: translateX(activeIndex * -100%); activeIndex - starts from 0  */
+}
+
+.active-card {
+    background-image: linear-gradient(to bottom,
+            rgba(256, 256, 256, 0.4),
+            rgba(256, 256, 256, 0.4));
+}
+
+.hour-time {
+    font-size: 24px;
+}
+
+.hour-icon {
+    font-size: 80px;
+}
+
+.hour-temp {
+    font-size: 36px;
+}
+
+.hourly-indicators-container {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hourly-indicator {
+    height: 10px;
+    margin: 0px 25px;
+    background-image: linear-gradient(to bottom,
+            rgba(128, 128, 128, 0.4),
+            rgba(128, 128, 128, 0.4));
+    width: 100%;
+    border-radius: 8px;
+}
+
+.active-indicator {
+    background-color: rgb(256, 256, 256) !important;
+}
+
+.m-44 {
+    margin-bottom: 44px;
+}
+
+.days {
+    width: 90%;
+    height: 130px;
+}
+
+.days-container {
+    width: 100%;
+    height: 100px;
+    overflow-x: scroll;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    background-image: linear-gradient(to bottom,
+            rgba(128, 128, 128, 0.4),
+            rgba(128, 128, 128, 0.4));
+    border-radius: 16px;
+}
+
+.days-container::-webkit-scrollbar {
+    display: none;
+}
+
+.day {
+    height: 64px;
+    flex: 0 0 168px;
+    min-width: 168px;
+    max-width: 168px;
+    width: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top,
+.bottom {
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.active-day.top {
+    font-size: 20px;
+    text-align: center;
+}
+
+.active-day.bottom {
+    font-size: 36px;
+}
+
+.active-day.day {
+    width: 224px;
+    flex: 0 0 224px;
+    max-width: 224px;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .hourly-indicator {
+        margin: 0px 7px;
+    }
+}
+
+@media (max-width: 750px) {
+    .info {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .info-text {
+        margin: 28px 0px;
+    }
+}
+
+@media (max-width: 673px) {
+    .hourly-indicator {
+        margin: 0px 5px;
+    }
+}
+
+@media (max-width: 567px) {
+    .hourly-indicator {
+        margin: 0px 2px;
+    }
+}
+
+@media (max-width: 510px) {
+    .hero {
+        width: auto
+    }
+    /* change styling based on spacing with help of figma */
+}
